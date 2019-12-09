@@ -1,0 +1,54 @@
+int lesson_lottery(){
+    int age;
+    int Nid;////user id
+    int Hmoney;////user show money
+    int Bmoney;////user play money
+    int Pcode;////
+    int Final;
+
+    printf("Dear Player \n\tPlease enter your age   :   ");
+    scanf("%d",&age);
+    if (age>13){
+            printf("You must have 1000ks \nHow many you get your money : ");
+            scanf("%d",&Hmoney);
+            printf("You are money have : %d\n",Hmoney);
+        while (age>13){
+                printf("Please enter your name of ID : ");
+                scanf("%d",&Nid);
+        while (Nid==1234){
+                    printf("\t\t\t####Welcome from my game####\nNote : one bet must have 1000ks\n Please Pick you want to bet money : ");
+                    scanf("%d",&Bmoney);
+        while (Hmoney>999){
+                        printf("Please Pick you play number , IT must be 4 digit : ");
+                        scanf("%d",&Pcode);
+        if (Pcode==4321){
+
+                        printf("Congratulations !! \n You are win in Game ! ");
+                        Hmoney=Bmoney*5;
+                        printf("If you want to play again\nPress 1 for Play game\tPress 2 for quit game");
+                        scanf("%d",&Final);
+                        printf("This is your Money : %d",Hmoney);
+                        if (Final == 1 ){
+                            printf("Thank you Play again !! ");
+                        }else{
+                        printf("Thank for Playing!!\n Good Bye !!");
+                        exit(0);
+                        }
+                        }else{
+                        printf("Sorry you are not winner !!\n Try again baby !!\n");
+                        Hmoney=Hmoney-Bmoney;
+                        printf("This is your Money : %d\n",Hmoney);
+                        if (Hmoney<999){
+                            printf("You have not enough money to Play Game !!",Hmoney);
+                            exit(0);
+                        }
+            }
+        }
+    }
+}
+    }else{
+    printf("Sorry Kids !! We don't allow to play you");
+    }
+getch();
+return 0;
+}
